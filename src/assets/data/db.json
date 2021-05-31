@@ -1,0 +1,142 @@
+{
+  "userdetails": [
+    {
+      "customerId": 594970,
+      "customerName": "Test Customer",
+      "customerAddress": "Test Address",
+      "customerEmailId": "abc@abc.com",
+      "customerPhone": "9123456789",
+      "customerstatus": "Active",
+      "customerAccounts": [
+        {
+          "accountnumber": 7721228623,
+          "accounttype": "Savings",
+          "accountstatus": "Active",
+          "balance": 49000
+        }
+      ],
+      "Gender": "Male",
+      "password": "test@123",
+      "userType": "Admin",
+      "id": 1
+    },
+    {
+      "customerId": 734662,
+      "customerName": "Test Another Cutomer",
+      "customerAddress": "Test Another Address",
+      "customerEmailId": "def@def.com",
+      "customerPhone": "9123456789",
+      "customerstatus": "Active",
+      "customerAccounts": [
+        {
+          "accountnumber": 8686763456,
+          "accounttype": "Salary",
+          "accountstatus": "Active",
+          "balance": 16800
+        }
+      ],
+      "Gender": "Male",
+      "password": "anu@123",
+      "userType": "User",
+      "id": 2
+    },
+    {
+      "customerId": 654028,
+      "customerName": "Test Customer 3",
+      "customerAddress": " Test Address Customer 3",
+      "customerEmailId": "ghi@ghi.com",
+      "customerPhone": "9123456789",
+      "customerstatus": "Active",
+      "customerAccounts": [
+        {
+          "accountnumber": 3254527628,
+          "accounttype": "NRI",
+          "accountstatus": "Active",
+          "balance": 49700
+        }
+      ],
+      "Gender": "Male",
+      "password": "cus@123",
+      "userType": "User",
+      "id": 3
+    },
+    {
+      "customerId": 609596,
+      "customerName": "test cust new",
+      "customerAddress": "Test Address",
+      "customerEmailId": "poi@poi.com",
+      "customerPhone": "9123456789",
+      "customerstatus": "Active",
+      "customerAccounts": [
+        {
+          "accountnumber": 4115333181,
+          "accounttype": "Savings",
+          "accountstatus": "Active",
+          "balance": "60000"
+        }
+      ],
+      "Gender": "Male",
+      "password": "qwerty",
+      "userType": "Customer",
+      "id": 4
+    }
+  ],
+  "transactions": [
+    {
+      "transactionid": 594384,
+      "transactionAmount": "500",
+      "balanceAsOnDate": 17000,
+      "fromAccountNumber": "8686763456(def@def.com)",
+      "toAccountNumber": "7721228623(abc@abc.com)",
+      "transactionDate": "2021-05-29",
+      "transactionStatus": "Completed",
+      "transactionRemarks": "test Comments",
+      "transactionType": "NEFT",
+      "customerEmailId": "def@def.com",
+      "creditorDebit": "Dr",
+      "id": 1
+    },
+    {
+      "transactionid": 594384,
+      "transactionAmount": "500",
+      "balanceAsOnDate": 48500,
+      "fromAccountNumber": "8686763456(def@def.com)",
+      "toAccountNumber": "7721228623(abc@abc.com)",
+      "transactionDate": "2021-05-29",
+      "transactionStatus": "Completed",
+      "transactionRemarks": "test Comments",
+      "transactionType": "NEFT",
+      "customerEmailId": "abc@abc.com",
+      "creditorDebit": "Cr",
+      "id": 2
+    },
+    {
+      "transactionid": 734401,
+      "transactionAmount": "300",
+      "balanceAsOnDate": "50000",
+      "fromAccountNumber": "3254527628(ghi@ghi.com)",
+      "toAccountNumber": "8686763456(def@def.com)",
+      "transactionDate": "2021-05-29",
+      "transactionStatus": "Completed",
+      "transactionRemarks": "test Comments",
+      "transactionType": "NEFT",
+      "customerEmailId": "ghi@ghi.com",
+      "creditorDebit": "Dr",
+      "id": 3
+    },
+    {
+      "transactionid": 734401,
+      "transactionAmount": "300",
+      "balanceAsOnDate": 16500,
+      "fromAccountNumber": "3254527628(ghi@ghi.com)",
+      "toAccountNumber": "8686763456(def@def.com)",
+      "transactionDate": "2021-05-29",
+      "transactionStatus": "Completed",
+      "transactionRemarks": "test Comments",
+      "transactionType": "NEFT",
+      "customerEmailId": "def@def.com",
+      "creditorDebit": "Cr",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<div class="container">
+    <header style="text-align: center;"><h3><b>Customer Details</b></h3></header>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <div style="text-align: right;">
+            <a routerLink="/customer-component" class="nav-link fas fa-align-right"><b>Create New Customer</b></a>
+        </div>
+        <h6><b>User ID Filter</b></h6> 
+            <input type="text" [(ngModel)]="filteredCustomerID" placeholder="search for CustomerID">
+            <br>
+            <input type="text" [(ngModel)]="cusName" #customerName = "ngModel" id="customerName" placeholder="Enter customer name"/>
+            <input type="text" [(ngModel)]="accNum" #accountNumber = "ngModel" id="accountNumber" placeholder="Enter account number"/>
+            <!-- [(ngModel)]="accountNum" #accountNum = "ngModel"  [(ngModel)]="acctype" #acctype = "ngModel" -->
+            <select id="accountType"
+            [(ngModel)]="acctype" #accountType = "ngModel"
+        class="browser-default custom-select"  
+        placeholder="Select Account Type">
+            <option value="Savings">Savings</option>
+            <option value="Current">Current</option>     
+            <option value="NRI">NRI</option>
+            <option value="Fixed">Fixed</option>
+            <option value="Recurring">Recurring</option>
+            <option value="Salary">Salary</option>
+        </select>
+        <button class="btn btn-primary" (click)="SearchUserAccount()">Search</button>
+            <br>
+            <hr>
+        <ul class="list-group">
+            <li class="list-group-item" style="background-color:lightblue;"
+            *ngFor="let details of customerdetails | filter: filteredCustomerID: 'customerId'"
+            > 
+            <span class="badge" style="float:right;" > 
+                {{ details.customerstatus }}
+               </span>
+                <span><strong>Customer ID : {{details.customerId}}</strong></span> | <br>
+                <span><strong>Customer Name : {{details.customerName}}</strong></span> | <br>
+                <span><strong>Address : {{details.customerAddress}}</strong></span> | <br>
+                <span><strong>Phone : {{details.customerPhone}}</strong></span> | <br>
+                <span><strong>EmailID : {{details.customerEmailId}}</strong></span> | <br>
+                <span><strong>Gender : {{details.Gender}}</strong></span>  <br>
+                <br>
+                <div>
+                    <li class="list-group-item" style="background-color:aliceblue;" 
+                        *ngFor="let accountDetails of details.customerAccounts">
+                        <span class="badge" style="float:right;" > 
+                            {{ accountDetails.accountstatus }}
+                        </span>
+                        <span><strong>Account Number : {{accountDetails.accountnumber}}</strong></span> | <br>
+                        <span><strong>Account Type : {{accountDetails.accounttype}}</strong></span> | <br>
+                        <span><strong>Account Balance : {{accountDetails.balance}}</strong></span>  <br>
+                    </li>
+                </div>
+                
+            </li>
+        </ul>
+    </div>
+</div>  
