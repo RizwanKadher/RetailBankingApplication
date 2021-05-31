@@ -24,6 +24,10 @@ export class UserlistComponent implements OnInit {
 
   readAllCustomers(){
       this.customerdetails=[];
+      this.cusName = "";
+      this.accNum = "";
+      this.acctype = "";
+      this.filteredCustomerID = "";
       this.customerService.getCustomerDetails()
       .subscribe((resp:any) => {
             (error: any) => console.log(error);

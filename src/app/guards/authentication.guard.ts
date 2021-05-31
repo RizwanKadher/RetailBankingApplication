@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 
 
@@ -7,10 +7,37 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthenticationGuard implements CanActivate {
+
+  constructor(private router : Router){
+    
+  }
+
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+
+    let url: string = state.url;
+          return this.checkLogin(route, url);
   }
+
+  checkLogin(route: ActivatedRouteSnapshot, url: string): true | UrlTree {
+    console.log("Url: " + url)
+    //let val: string = localStorage.getItem('isAdmin');
+    let val: string = localStorage.getItem('privilage');
+    if(val != null ){
+       if(route.data.role && route.data.role.indexOf(val) === -1 && url == "/login" ){   //&& val == "true" 
+             this.router.parseUrl('/usersummary');
+          }
+          else if(route.data.role && route.data.role.indexOf(val) === -1 && url == "/login" ) //&& val == "false"
+          {
+             this.router.parseUrl('/accountsummary');
+          }
+       else 
+          return true;
+     }
+     else {
+       return this.router.parseUrl('/login');
+    }
+ }
   
 }

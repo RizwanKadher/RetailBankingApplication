@@ -208,7 +208,7 @@ export class FundtransferComponent implements OnInit {
                    console.log(this.toCustomerAccountDetails);
                    this.updateToCustomer(this.toid, this.toCustomerAccountDetails[0])
                     alert("Trasaction Done.");
-                    window.location.href='./account-summary-component';
+                    window.location.href='./accountsummary';
                   }
                 },
                 error => {

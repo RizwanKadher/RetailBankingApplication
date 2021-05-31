@@ -1,35 +1,33 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid" style="background-color: darkslategray;">
       <div class="navbar-header">
-        <a href="/home-component" class="navbar-brand">
+        <a href="/home" class="navbar-brand">
           <b><img width="70px" height="30px" 
-            src="http://www.logogala.com/images/uploads/gallery/abc.png"> <span style="color: floralwhite;"> Retail Banking</span></b>
+            src="https://cdn.freelogovectors.net/wp-content/uploads/2018/04/abclogo-auditbureauofcirculations.png"> <span style="color: floralwhite;"> Retail Banking</span></b>
             </a>
       </div>
       <div class="collapse navbar-collapse">
           <div *ngIf="isUserLoggedIn">
-          <ul class="nav navbar-nav">
-              <li class="nav-item"><a class="nav-link"  *ngIf="isAdmin"   routerLink="/customer-component" 
-              routerLinkActive="active"><b>Customer Management</b></a></li>
-              <li class="nav-item"><a class="nav-link" *ngIf="isAdmin"    routerLink="/customersummary-component" 
+          <ul class="nav navbar-nav">              
+              <li class="nav-item"><a style="color: honeydew;" class="nav-link" *ngIf="isAdmin"    routerLink="/usersummary" 
                 routerLinkActive="active"><b>Customer Summary</b></a></li>
-                <li class="nav-item"><a class="nav-link" *ngIf="!isAdmin"   routerLink="/account-summary-component" 
+                <li class="nav-item"><a style="color: honeydew;" class="nav-link"  *ngIf="isAdmin"   routerLink="/user" 
+                  routerLinkActive="active"><b>Manage User</b></a></li>
+                <li class="nav-item"><a style="color: honeydew;" class="nav-link" *ngIf="!isAdmin"   routerLink="/accountsummary" 
                   routerLinkActive="active"><b>Account Summary</b></a></li>
-                <li class="nav-item"><a class="nav-link"  *ngIf="!isAdmin"  routerLink="/fundtransfer-component" 
-                  routerLinkActive="active"><b>Fund Transfer</b></a></li>
-                  <!-- <li class="nav-item"><a class="nav-link"  *ngIf="!isAdmin"  routerLink="/mini-statement-component" 
-                    routerLinkActive="active"><b>Mini Statement</b></a></li> -->
-                    <li class="nav-item"><a class="nav-link"  *ngIf="!isAdmin"  routerLink="/detailed-statement-component" 
-                        routerLinkActive="active"><b>Detailed Statement</b></a></li>
+                <li class="nav-item"><a style="color: honeydew;" class="nav-link"  *ngIf="!isAdmin"  routerLink="/fundtransfer" 
+                  routerLinkActive="active"><b>Fund Transfer</b></a></li>                  
+                <li class="nav-item"><a style="color: honeydew;" class="nav-link"  *ngIf="!isAdmin"  routerLink="/detailedstatement" 
+                    routerLinkActive="active"><b>Detailed Statement</b></a></li>
           </ul>
         </div>
         <div style="float:right;">
             <ul class="nav navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link cursor-pointer" style="color: floralwhite;" *ngIf="isUserLoggedIn" routerLink="/logout-component" 
+                    <a class="nav-link cursor-pointer" style="color: floralwhite;font-weight: bolder; font-size: medium;" *ngIf="isUserLoggedIn" routerLink="/logout" 
                     routerLinkActive="active">Logout</a></li>
                   <li class="nav-item">
-                    <a class="nav-link" style="color: floralwhite; font-weight: bolder; font-size: medium;" *ngIf="!isUserLoggedIn" routerLink="/login-component" 
+                    <a class="nav-link" style="color: floralwhite; font-weight: bolder; font-size: medium;" *ngIf="!isUserLoggedIn" routerLink="/login" 
                     routerLinkActive="active">Login</a>
                   </li>
             </ul>

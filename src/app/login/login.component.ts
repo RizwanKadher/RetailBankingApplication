@@ -45,14 +45,14 @@ export class LoginComponent implements OnInit {
         {
           localStorage.setItem("isAdmin","true");
           //localStorage.setItem("privilage","Admin");
-          this.router.navigate(['/customersummary-component']); 
+          this.router.navigate(['/usersummary']); 
           //this.router.navigate(['/account-summary-component']);
         }
         else if (this.UserType === "User") {
           localStorage.setItem("isAdmin","false");
           //localStorage.setItem("privilage","User");
           //this.router.navigate(['/customersummary-component']); 
-        this.router.navigate(['/account-summary-component']); 
+          this.router.navigate(['/accountsummary']); 
         }
   }
 

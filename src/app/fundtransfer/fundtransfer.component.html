@@ -1,5 +1,5 @@
 <div class="container">
-    <header style="text-align: center;"><h3><b>Fund Transfer Form</b></h3></header>
+    <header style="text-align: center;"><h3><b>Fund Transfer</b></h3></header>
 <div class="submit-form">
     <form (ngSubmit)="form.form.valid && createFundTransfer()" #form="ngForm" novalidate>
         <div class="form-group">
@@ -116,7 +116,7 @@
             </div>
           </div>
           <div class="text-center">
-            <button class="btn btn-success mr-2">Transfer</button> 
+            <button style="margin-right: 20px;" class="btn btn-success mr-2">Submit</button> 
             <button class="btn btn-secondary" type="reset">Cancel</button>
             </div>
     </form>

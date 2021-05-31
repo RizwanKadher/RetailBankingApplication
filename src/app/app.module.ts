@@ -16,7 +16,6 @@ import { MinistatementComponent } from './ministatement/ministatement.component'
 import { DetailedstatementComponent } from './detailedstatement/detailedstatement.component';
 import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
 import { FilterPipe } from './pipes/filter.pipe';
-import { LayoutComponent } from './user/layout/layout.component';
 
 
 import { CommonModule } from '@angular/common';
@@ -39,7 +38,6 @@ import { AlertComponent } from './alert/alert.component';
     DetailedstatementComponent,
     FundtransferComponent,
     FilterPipe,
-    LayoutComponent,
     AlertComponent
   ],
   imports: [
